@@ -1,0 +1,8 @@
+ZSH_THEME_GIT_PROMPT_PREFIX="("
+ZSH_THEME_GIT_PROMPT_SUFFIX=")"
+ZSH_THEME_GIT_DIRTY="*"
+ZSH_THEME_GIT_CLEAN=""
+
+PROMPT='% $(directory)$(git_prompt_info)%b '
+unset RPROMPT
+PS1='%d>'
