@@ -1,14 +1,10 @@
-# SkyyySi's Nordic i3 config file
-#
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
-### Variables for settings (This makes changing them WAY easyer!) ###
+### Variables for settings (This makes changing them WAY easier!) ###
 set $mod                             Mod1
 set $smod                            Shift
 set $wm_setting_font                 pango:Meslo LGM Nerd Font 11
 set $wm_setting_gap_width            15
 set $wm_setting_gap_heigth           15
-set $wm_setting_border_size          2
+set $wm_setting_border_size          3 
 set $wm_setting_key_left             h
 set $wm_setting_key_down             j 
 set $wm_setting_key_up               k
@@ -19,7 +15,7 @@ set $wm_setting_app_browser          qutebrowser
 set $wm_setting_app_launcher         rofi -show run
 set $wm_setting_app_compositor       picom
 
-set $wm_color_border_active_bg       #81A1C1
+set $wm_color_border_active_bg       #A1E3F9
 set $wm_color_border_active_fg       #3B4252
 set $wm_color_border_inactive_bg     #3B4252
 set $wm_color_border_inactive_fg     #D8DEE9
@@ -36,11 +32,6 @@ bindsym $mod+$smod+Return exec $wm_setting_app_browser
 bindsym $mod+d exec $wm_setting_app_launcher
 
 ### Bar ###
-
-#exec_always --no-startup-id killall polybar
-#exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-#exec_always --no-startup-id polybar bot
-
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
 #lockscreen
@@ -128,9 +119,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### Gaps ###
-gaps horizontal $wm_setting_gap_width
-gaps vertical   $wm_setting_gap_heigth
-smart_gaps on
+#gaps horizontal $wm_setting_gap_width
+#gaps vertical   $wm_setting_gap_heigth
+#smart_gaps on
+
+gaps inner 7
+gaps outer 7
+gaps top 40
 
 ### Borders ###
 default_border pixel $wm_setting_border_size
